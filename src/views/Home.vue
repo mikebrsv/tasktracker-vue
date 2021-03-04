@@ -1,4 +1,9 @@
 <template>
+  <Button
+    @button-click="toggleAddTask"
+    :text="showAddTask ? 'Close Form' : 'Add Task'"
+    :color="showAddTask ? 'red' : 'green'"
+  />
   <AddTask v-show="showAddTask" @add-task="addTask" />
   <Tasks
     @toggle-reminder="toggleReminder"
@@ -10,22 +15,25 @@
 <script>
 import Tasks from "../components/Tasks";
 import AddTask from "../components/AddTask";
+import Button from "../components/Button";
 
 export default {
   name: "Home",
-  props: {
-    showAddTask: Boolean,
-  },
   components: {
     Tasks,
     AddTask,
+    Button,
   },
   data() {
     return {
       tasks: [],
+      showAddTask: false,
     };
   },
   methods: {
+    toggleAddTask() {
+      this.showAddTask = !this.showAddTask;
+    },
     async addTask(task) {
       const res = await fetch("api/tasks", {
         method: "POST",

@@ -68,7 +68,6 @@ export default {
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
 }

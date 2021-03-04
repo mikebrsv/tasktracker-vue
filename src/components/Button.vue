@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick()" :style="{ background: color }" class="btn">
+  <button @click="onClick()" :style="{ background: color }" class="btn btn-block">
     {{ text }}
   </button>
 </template>
@@ -18,3 +18,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.btn {
+  margin-bottom: 20px;
+}
+</style>
