@@ -1,15 +1,15 @@
-<template>
-  <Button
-    @button-click="toggleAddTask"
-    :text="showAddTask ? 'Close Form' : 'Add Task'"
-    :color="showAddTask ? 'red' : 'green'"
-  />
-  <AddTask v-show="showAddTask" @add-task="addTask" />
-  <Tasks
-    @toggle-reminder="toggleReminder"
-    @delete-task="deleteTask"
-    :tasks="tasks"
-  />
+<template lang="pug">
+Button(
+  @button-click="toggleAddTask",
+  :text="showAddTask ? 'Close Form' : 'Add Task'",
+  :color="showAddTask ? 'red' : 'green'"
+)
+AddTask(v-show="showAddTask", @add-task="addTask")
+Tasks(
+  @toggle-reminder="toggleReminder",
+  @delete-task="deleteTask",
+  :tasks="tasks"
+)
 </template>
 
 <script>

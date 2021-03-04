@@ -1,9 +1,8 @@
-<template>
-  <div class="container">
-    <Header title="Task Tracker" />
-    <router-view></router-view>
-    <Footer />
-  </div>
+<template lang="pug">
+.container
+  Header(title="Task Tracker")
+  router-view
+  Footer
 </template>
 
 <script>

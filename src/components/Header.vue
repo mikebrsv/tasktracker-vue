@@ -1,7 +1,6 @@
-<template>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
+<template lang="pug">
+header
+  h1 {{ title }}
 </template>
 
 <script>

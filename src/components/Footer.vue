@@ -1,8 +1,7 @@
-<template>
-  <footer>
-    <p>Copyright &copy; 2021</p>
-    <router-link to="/about">About</router-link>
-  </footer>
+<template lang="pug">
+footer
+  p Copyright &copy; 2021
+  router-link(to="/about") About
 </template>
 
 <style lang="sass" scoped>

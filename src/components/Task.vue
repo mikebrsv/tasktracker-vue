@@ -1,14 +1,11 @@
-<template>
-  <div
-    @dblclick="onToggle(task.id)"
-    :class="[task.reminder ? 'reminder' : '', 'task']"
-  >
-    <h3>
-      {{ task.text }}
-      <i @click="onDelete(task.id)" class="fas fa-times"></i>
-    </h3>
-    <p>{{ task.day }}</p>
-  </div>
+<template lang="pug">
+div(
+  @dblclick="onToggle(task.id)",
+  :class="[task.reminder ? 'reminder' : '', 'task']"
+)
+  h3 {{ task.text }}
+    i.fas.fa-times(@click="onDelete(task.id)")
+  p {{ task.day }}
 </template>
 
 <script>

@@ -1,11 +1,5 @@
-<template>
-  <button
-    @click="onClick()"
-    :style="{ background: color }"
-    class="btn btn-block"
-  >
-    {{ text }}
-  </button>
+<template lang="pug">
+button.btn.btn-block(@click="onClick()", :style="{ background: color }") {{ text }}
 </template>
 
 <script>
